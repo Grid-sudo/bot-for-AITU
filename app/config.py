@@ -27,6 +27,10 @@ class Settings(BaseSettings):
 
     bot_token: str = Field(..., alias="BOT_TOKEN")
     bot_username: str = Field(default="", alias="BOT_USERNAME")
+    webhook_url: str = Field(default="", alias="WEBHOOK_URL")
+    render_external_url: str = Field(default="", alias="RENDER_EXTERNAL_URL")
+    webhook_secret: str = Field(default="", alias="WEBHOOK_SECRET")
+    port: int = Field(default=10000, alias="PORT")
 
     admin_ids_raw: str = Field(default="", alias="ADMIN_IDS")
 

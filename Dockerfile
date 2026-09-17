@@ -21,4 +21,4 @@ RUN useradd --create-home --shell /bin/bash appuser \
     && chown -R appuser:appuser /app
 USER appuser
 
-CMD ["python", "main.py"]
+CMD ["sh", "-c", "alembic upgrade head && python main.py"]
